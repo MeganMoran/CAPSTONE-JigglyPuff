@@ -1,0 +1,202 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"; lang="en">
+<head runat="server">
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <link rel="shortcut icon" href="./bootstrap-3.1.1/docs/assets/ico/favicon.ico"/>
+
+    <title>Summer of the Arts</title>
+
+    <!-- Megans Menu CSS 
+    <link rel="stylesheet" type="text/css" href="Stylin'/StyleSheet.css" /> -->
+
+    <!-- Megans Menu JS 
+    <script src="JQuery/JQuery.js" type="text/javascript">
+
+
+    </script> -->
+
+    <!-- Alt JS -->
+    <script src="JQuery/JQuery.js" type="text/javascript">
+
+    </script> 
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap-3.1.1/docs/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap-3.1.1/docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet"/>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+ </head>
+
+  <body>
+    <form id="form1" runat="server">
+    <div>
+    
+        <div class="container">
+          <div class="header">
+            <ul class="nav nav-pills pull-right">
+              <li><a href="#menu"><img src="./Icon Set/System Icons/Guide.png" alt="menu" width="45" height="45" /></a></li>
+            </ul>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+          </div>
+          
+
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+   
+
+        </asp:ContentPlaceHolder>
+
+
+        
+          <div>
+            <div>
+              <h4><a id="menu"></a>Summer of the Arts</h4>
+                 <div class="figure"> 
+                     <h5><a href="Default.aspx"><img src="./Icon Set/Applications/Windows 8 News.png" alt="News" width="50" height="45" /></a></h5>
+                     <h5>News</h5>
+                  </div> 
+                 <div class="figure"> 
+                     <h5> <a href="About Us.aspx"><img src="./Icon Set/System Icons/Info.png" alt="About Us" width="50" height="45" /></a></h5>
+                     <h5>About Us</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="Events.aspx"><img src="./Icon Set/Folders/My Apps.png" alt="Events" width="50" height="45" /></a></h5>
+                     <h5>Events</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="Gallery.aspx"><img src="./Icon Set/Folders/Pictures Mobile.png" alt="Gallery" width="50" height="45" /></a></h5>
+                     <h5>Gallery</h5>
+                 </div>
+
+              <h4>Art Fest</h4>
+                  <input type="button"   
+                    value="show hide div"   
+                    onclick="showHideDiv()" /> 
+                 <div id="div1" class ="divStyle">
+                     <div class="figure"> 
+                         <h5><a href="ArtFestDefault.aspx"><img src="./Icon Set/Applications/Windows 8 News.png" alt="News" width="50" height="45" /></a></h5>
+                         <h5>News</h5>
+                     </div>
+                     <div class="figure">
+                         <h5> <a href="ArtFestSchedule.aspx"><img src="./Icon Set/Applications/Calendar.png" alt="Schedule" width="50" height="45" /></a></h5>
+                         <h5>Schedule</h5>
+                     </div>
+                     <div class="figure">
+                         <h5> <a href="ArtFestPerformers.aspx"><img src="./Icon Set/Folders/Music.png" alt="Performers" width="50" height="45" /></a></h5>
+                         <h5>Performers</h5>
+                     </div>
+                     <div class="figure">
+                         <h5> <a href="ArtFestArtists.aspx"><img src="./Icon Set/Applications/Paint.png" alt="Artists" width="50" height="45" /></a></h5>
+                         <h5>Artists</h5>
+                     </div>
+                     <div class="figure">
+                         <h5> <a href="ArtFestVendors.aspx"><img src="./Icon Set/Folders/Personal.png" alt="vendors" width="50" height="45" /></a></h5>
+                         <h5>Vendors</h5>
+                     </div>
+                     <div class="figure">
+                         <h5> <a href="ArtFestGallery.aspx"><img src="./Icon Set/Folders/Pictures Mobile.png" alt="Gallery" width="50" height="45" /></a></h5>
+                         <h5>Gallery</h5>
+                     </div>
+                  </div>
+
+
+
+              <h4>Jazz Fest</h4>
+                 <div class="figure"> 
+                     <h5><a href="JazzFestDefault.aspx"><img src="./Icon Set/Applications/Windows 8 News.png" alt="News" width="50" height="45" /></a></h5>
+                     <h5>News</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="JazzFestSchedule.aspx"><img src="./Icon Set/Applications/Calendar.png" alt="Schedule" width="50" height="45" /></a></h5>
+                     <h5>Schedule</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="JazzFestPerformers.aspx"><img src="./Icon Set/Folders/Music.png" alt="Performers" width="50" height="45" /></a></h5>
+                     <h5>Performers</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="JazzFestVendors.aspx"><img src="./Icon Set/Folders/Personal.png" alt="vendors" width="50" height="45" /></a></h5>
+                     <h5>Vendors</h5>
+                 </div>
+                 <div class="figure">
+                     <h5> <a href="JazzFestGallery.aspx"><img src="./Icon Set/Folders/Pictures Mobile.png" alt="Gallery" width="50" height="45" /></a></h5>
+                     <h5>Gallery</h5>
+                 </div>
+                
+                <!--<div  id='cssmenu'>
+                    <a id="menu"></a>
+                    <ul>
+                       <li class='has-sub'><a href='Default.aspx'><span>Summer of the Arts</span></a>
+                          <ul>
+                             <li><a href='News.aspx'><span>News</span></a></li>
+                             <li><a href='About Us.aspx'><span>About Us</span></a></li>
+                             <li><a href='Events.aspx'><span>Events</span></a></li>
+                             <li class='last'><a href='Gallery.aspx'><span>Gallery</span></a></li>
+                          </ul>
+                       </li>
+                       <li class='has-sub'><a href='#'><span>Art Fest</span></a>
+                          <ul>
+                             <li><a href='#'><span>News</span></a></li>
+                             <li><a href='#'><span>Schedule</span></a></li>
+                             <li><a href='#'><span>Performers</span></a></li>
+                             <li><a href='#'><span>Artists</span></a></li>
+                             <li><a href='#'><span>Vendors</span></a></li>
+                             <li class='last'><a href='#'><span>Gallery</span></a></li>
+                          </ul>
+                       </li>
+                       <li class='has-sub last'><a href='#'><span>Jazz Fest</span></a>
+                          <ul>
+                             <li><a href='#'><span>News</span></a></li>
+                             <li><a href='#'><span>Schedule</span></a></li>
+                             <li><a href='#'><span>Performers</span></a></li>
+                             <li><a href='#'><span>Vendors</span></a></li>
+                             <li class='last'><a href='#'><span>Gallery</span></a></li>
+                          </ul>
+                       </li>
+                    </ul>
+                </div> -->
+              
+
+
+            </div>
+            </div>
+        <div class="footer">
+            <p>&copy; jigglypuff Inc. Capstone Project 2014</p>
+        </div>  
+    </div> <!-- /container -->
+    </div>
+     
+
+    </form>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
